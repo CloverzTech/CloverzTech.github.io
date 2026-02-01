@@ -1,0 +1,127 @@
+# 🌙 Dark Mode - Quick Reference Card
+
+## How to Use Dark Mode
+
+### Toggle Button Location
+- **Position**: Top-right corner of navbar
+- **Icon**: Moon (🌙) in light mode | Sun (☀️) in dark mode
+- **Action**: Click to toggle between light and dark modes
+
+### How It Works
+1. Click the moon/sun icon
+2. Page colors change instantly
+3. Preference saved to browser
+4. Preference restored on next visit
+
+## What Changes in Dark Mode
+
+| Component | Light Mode | Dark Mode |
+|-----------|-----------|-----------|
+| **Background** | White | Very Dark Gray |
+| **Text** | Dark Gray | Light Gray |
+| **Navbar** | White | Dark Blue |
+| **Cards** | Light Blue | Dark Blue |
+| **Buttons** | Teal | Teal (enhanced contrast) |
+| **Links** | Teal | Cyan |
+| **Borders** | Dark Gray | Light Gray |
+| **Input Fields** | White | Dark Blue |
+| **Toggle Icon** | Moon | Sun |
+
+## Key Features
+
+✅ **Saves Your Preference** - Stays in dark mode when you refresh  
+✅ **Works Everywhere** - All sections styled for dark mode  
+✅ **Smooth Toggle** - Instant color change  
+✅ **All Devices** - Desktop, tablet, mobile  
+✅ **All Browsers** - Chrome, Firefox, Safari, Edge  
+✅ **Readable** - High contrast for easy reading  
+
+## Testing Dark Mode
+
+### Simple Test (30 seconds)
+1. Click moon icon → colors change
+2. Refresh page → colors stay same
+3. Done! ✓
+
+### Complete Test (2 minutes)
+1. Click moon icon to turn ON dark mode
+2. Scroll through all sections - check colors are correct
+3. Refresh page - dark mode should still be ON
+4. Click sun icon to turn OFF dark mode
+5. Refresh page - light mode should be ON
+6. Open DevTools (F12) → Application → LocalStorage
+7. Check `darkMode` key shows "true" or "false" ✓
+
+## Troubleshooting
+
+### Dark mode button not working?
+1. Refresh page (F5)
+2. Clear cache (Ctrl+Shift+Delete)
+3. Try different browser
+
+### Colors don't look right?
+1. Make sure CSS file loaded (DevTools → Network)
+2. Clear cache and refresh
+3. Hard refresh (Ctrl+Shift+R)
+
+### Preference not saving?
+1. Check browser allows localStorage
+2. Try different browser
+3. Check console (F12) for errors
+
+## Color Guide
+
+### Light Mode
+```
+Background: White
+Text: Dark Gray/Blue
+Primary: Teal (#06b6d4)
+```
+
+### Dark Mode
+```
+Background: Very Dark Gray (#0f1419)
+Text: Light Gray/Blue (#f0f5fb)
+Primary: Teal (#06b6d4)
+Cards: Dark Blue (#1a2a3a)
+```
+
+## Keyboard Shortcut
+Currently: Click button only
+Future: Could add keyboard shortcut (e.g., Alt+D)
+
+## Browser Storage
+Dark mode preference stored in:
+- **LocalStorage Key**: `darkMode`
+- **Value**: `"true"` (dark) or `"false"` (light)
+- **Visible in**: DevTools → Application → LocalStorage
+
+## Accessibility
+
+✅ **High Contrast** - Readable text in both modes  
+✅ **Keyboard Access** - Button clickable via keyboard  
+✅ **Screen Readers** - Button has proper labels  
+✅ **Color Blind Friendly** - Works with various color blindness  
+
+## Did You Know?
+
+- Dark mode reduces eye strain in low-light environments
+- Uses less battery on OLED screens
+- Helps focus by reducing bright light
+- Growing trend across modern apps
+- CloverTech supports it! 🎉
+
+## Still Have Questions?
+
+Check these files for more details:
+- `DARK_MODE_GUIDE.md` - Complete testing guide
+- `DARK_MODE_COLORS.md` - Color reference
+- `DARK_MODE_IMPLEMENTATION.md` - Technical details
+
+---
+
+**Version**: 1.0  
+**Status**: ✅ Ready to use  
+**Last Updated**: Latest session  
+
+**Remember**: Click the moon icon to toggle dark mode! 🌙

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Test - CloverTech</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#home">🍀 CloverTech</a>
+            </div>
+            <div class="navbar-right">
+                <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Selamat Datang di
+                <span class="highlight">CloverTech</span> -
+                <span class="rotating-word">Profesional</span>
+            </h1>
+            <p class="hero-subtitle">
+                Jasa Service Komputer & Laptop Terpercaya
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Booking Sekarang</button>
+                <button class="btn btn-secondary">Pelajari Lebih</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="section-header">
+            <h2>Layanan Kami</h2>
+            <p>Pilih layanan yang Anda butuhkan</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Service Komputer</h3>
+                <p>Perbaikan cepat dan profesional untuk semua jenis komputer</p>
+                <button class="btn btn-primary">Pesan Sekarang</button>
+            </div>
+            <div class="service-card">
+                <h3>Service Laptop</h3>
+                <p>Servis laptop berkualitas dengan teknisi berpengalaman</p>
+                <button class="btn btn-primary">Pesan Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="section-header">
+            <h2>Hubungi Kami</h2>
+        </div>
+        <div class="contact-cards">
+            <div class="contact-card">
+                <h3>Email</h3>
+                <p>pamanerizqi@gmail.com</p>
+            </div>
+            <div class="contact-card">
+                <h3>WhatsApp</h3>
+                <p>085848155578</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 CloverTech. Semua hak cipta dilindungi.</p>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+        function initializeDarkMode() {
+            const darkMode = localStorage.getItem('darkMode') === 'true';
+            
+            if (darkMode) {
+                document.body.classList.add('dark-mode');
+                updateDarkModeIcon();
+            }
+            
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener('click', toggleDarkMode);
+            }
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            
+            localStorage.setItem('darkMode', isDarkMode.toString());
+            updateDarkModeIcon();
+            
+            // Force layout recalculation
+            document.body.offsetHeight;
+            
+            console.log('Dark mode toggled:', isDarkMode);
+        }
+
+        function updateDarkModeIcon() {
+            if (!darkModeToggle) return;
+            
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            darkModeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            
+            console.log('Dark mode icon updated. Is dark mode:', isDarkMode);
+        }
+
+        // Initialize dark mode on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeDarkMode();
+            console.log('Dark mode initialized');
+        });
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        .navbar-logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .dark-mode-toggle {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode-toggle:hover {
+            transform: rotate(20deg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin: 0 0 10px 0;
+        }
+
+        .section-header p {
+            font-size: 1rem;
+            margin: 0;
+            opacity: 0.7;
+        }
+
+        .services-grid, .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .service-card, .contact-card {
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .service-card h3, .contact-card h3 {
+            margin: 0 0 10px 0;
+        }
+
+        .service-card p, .contact-card p {
+            margin: 0 0 15px 0;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #06b6d4;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #0891b2;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #06b6d4;
+            border: 2px solid #06b6d4;
+        }
+
+        .btn-secondary:hover {
+            background-color: #06b6d4;
+            color: white;
+        }
+    </style>
+</body>
+</html>

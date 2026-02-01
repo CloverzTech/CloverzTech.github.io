@@ -1,0 +1,1248 @@
+/* ============================================
+   RESPONSIVE DESIGN - TABLETS & MOBILE
+   ============================================ */
+
+/* LARGE SCREENS (1200px+) */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+
+    .hero .container {
+        gap: 30px;
+        padding: 0 30px;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-image {
+        flex: 0.8;
+    }
+
+    .services-grid,
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .booking-form-container {
+        padding: 40px 30px;
+    }
+
+    .contact-content {
+        gap: 30px;
+    }
+}
+
+/* TABLETS (768px - 1199px) */
+@media (max-width: 1024px) {
+    section {
+        padding: 60px 0;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.3rem; }
+
+    /* Navigation */
+    .nav-menu {
+        gap: 25px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar-right .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Hero Section */
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        flex: 1;
+    }
+
+    .hero-illustration {
+        font-size: 6rem;
+        gap: 20px;
+    }
+
+    /* Trust Section */
+    .trust-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 15px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    /* Products */
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .product-card.featured {
+        transform: scale(1);
+    }
+
+    .product-card.featured:hover {
+        transform: translateY(-10px);
+    }
+
+    /* Booking */
+    .booking-form-container {
+        padding: 30px 20px;
+    }
+
+    .booking-steps {
+        margin-bottom: 40px;
+    }
+
+    .step-indicator {
+        width: 60px;
+        height: 60px;
+        font-size: 1.1rem;
+    }
+
+    .step p {
+        font-size: 0.85rem;
+    }
+
+    .location-options {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    /* Floating buttons */
+    .back-to-top {
+        right: 30px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .whatsapp-button {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
+}
+
+/* SMALL TABLETS & LARGE PHONES (576px - 767px) */
+@media (max-width: 768px) {
+    section {
+        padding: 50px 0;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.1rem; }
+    h4 { font-size: 1rem; }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        gap: 8px;
+    }
+
+    .btn i {
+        font-size: 0.85rem;
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .navbar-container {
+        padding: 0 15px;
+    }
+
+    .navbar-logo a {
+        font-size: 1.2rem;
+        gap: 8px;
+    }
+
+    .navbar-logo i {
+        font-size: 1.5rem;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        text-align: center;
+        background-color: var(--color-white);
+        z-index: 999;
+        transition: left 0.3s ease;
+        padding: 20px 0;
+        box-shadow: var(--shadow-lg);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid var(--color-light);
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .nav-link:hover {
+        background-color: var(--color-light);
+    }
+
+    .navbar-right {
+        gap: 10px;
+    }
+
+    .navbar-right .btn {
+        display: none;
+    }
+
+    .dark-mode-toggle {
+        font-size: 1.3rem;
+    }
+
+    /* Hero */
+    .hero {
+        margin-top: 60px;
+        min-height: auto;
+        padding: 60px 0;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-illustration {
+        font-size: 4rem;
+        gap: 15px;
+    }
+
+    /* Trust Section */
+    .trust-section {
+        padding: 30px 0;
+        margin: -30px 0 30px 0;
+    }
+
+    .trust-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .trust-item {
+        padding: 15px;
+    }
+
+    .trust-item i {
+        font-size: 2rem;
+    }
+
+    .trust-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .trust-item p {
+        font-size: 0.85rem;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-card > p {
+        font-size: 0.9rem;
+    }
+
+    /* Products */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .product-card.featured {
+        transform: scale(1);
+    }
+
+    /* Booking */
+    .booking-form-container {
+        padding: 25px 15px;
+    }
+
+    .booking-steps {
+        margin-bottom: 30px;
+    }
+
+    .booking-steps::before {
+        display: none;
+    }
+
+    .step {
+        margin-bottom: 20px;
+    }
+
+    .step-indicator {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .step p {
+        font-size: 0.8rem;
+    }
+
+    .form-step h3 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .service-options {
+        gap: 12px;
+    }
+
+    .service-option {
+        padding: 15px;
+    }
+
+    .form-navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-navigation button {
+        width: 100%;
+        min-width: unset;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        padding: 25px;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+    }
+
+    .carousel-controls {
+        gap: 15px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .carousel-dots {
+        gap: 8px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .dot.active {
+        width: 24px;
+    }
+
+    /* FAQ */
+    .faq-question {
+        padding: 15px;
+    }
+
+    .faq-question h3 {
+        font-size: 1.05rem;
+    }
+
+    .faq-answer {
+        padding: 20px;
+    }
+
+    /* Contact */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-wrapper {
+        padding: 20px;
+    }
+
+    .contact-form {
+        gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px;
+    }
+
+    .map-container {
+        height: 300px;
+        margin-top: 30px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 40px 0 15px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .payment-methods {
+        flex-wrap: wrap;
+    }
+
+    /* Floating buttons */
+    .whatsapp-button,
+    .back-to-top {
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+
+    .back-to-top {
+        right: 70px;
+    }
+
+    .whatsapp-button {
+        right: 20px;
+    }
+}
+
+/* PHONES (< 576px) */
+@media (max-width: 576px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 35px 0;
+    }
+
+    .container {
+        padding: 0 12px;
+        max-width: 100%;
+    }
+
+    .section-header {
+        margin-bottom: 25px;
+    }
+
+    .section-header h2 {
+        font-size: 1.35rem;
+        margin-bottom: 8px;
+    }
+
+    .section-header p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    h1 { font-size: 1.4rem; }
+    h2 { font-size: 1.2rem; }
+    h3 { font-size: 0.95rem; }
+    h4 { font-size: 0.9rem; }
+
+    p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .btn {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+        border-radius: 6px;
+    }
+
+    .btn i {
+        font-size: 0.75rem;
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: 8px 0;
+        height: auto;
+    }
+
+    .navbar-container {
+        padding: 0 12px;
+    }
+
+    .navbar-logo a {
+        font-size: 0.95rem;
+        gap: 6px;
+    }
+
+    .navbar-logo span {
+        display: none;
+    }
+
+    .navbar-logo i {
+        font-size: 1.2rem;
+    }
+
+    .nav-menu {
+        top: 50px;
+    }
+
+    .nav-link {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .navbar-right {
+        gap: 5px;
+    }
+
+    .dark-mode-toggle {
+        font-size: 1rem;
+        width: 36px;
+        height: 36px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 30px 0;
+        min-height: auto;
+        margin-top: 50px;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 12px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 1.35rem;
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 10px 12px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-illustration {
+        font-size: 2.5rem;
+        gap: 10px;
+    }
+
+    /* Trust Section */
+    .trust-section {
+        padding: 20px 0;
+        margin: -20px 0 20px 0;
+    }
+
+    .trust-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .trust-item {
+        padding: 10px;
+    }
+
+    .trust-item i {
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+    }
+
+    .trust-item h3 {
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+    }
+
+    .trust-item p {
+        font-size: 0.7rem;
+        line-height: 1.3;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .service-card {
+        padding: 12px;
+    }
+
+    .service-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .service-card h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .service-card > p {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    .service-features {
+        margin-bottom: 12px;
+    }
+
+    .service-features li {
+        font-size: 0.75rem;
+        margin-bottom: 6px;
+    }
+
+    .service-price {
+        padding: 10px;
+        margin-bottom: 12px;
+        font-size: 0.85rem;
+    }
+
+    .service-price strong {
+        font-size: 0.95rem;
+    }
+
+    /* Products */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .package-label {
+        padding: 4px 10px;
+        font-size: 0.75rem;
+    }
+
+    .product-card {
+        padding: 12px;
+    }
+
+    .product-card h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .product-price {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+
+    .product-specs {
+        margin-bottom: 15px;
+    }
+
+    .product-specs li {
+        padding: 4px 0;
+        font-size: 0.8rem;
+    }
+
+    /* Booking */
+    .booking {
+        padding: 30px 0;
+    }
+
+    .booking-form-container {
+        padding: 15px 12px;
+        max-width: 100%;
+    }
+
+    .booking-steps {
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+
+    .booking-steps::before {
+        display: none;
+    }
+
+    .step {
+        margin-bottom: 15px;
+        flex: 1;
+        min-width: 80px;
+    }
+
+    .step-indicator {
+        width: 40px;
+        height: 40px;
+        font-size: 0.85rem;
+        line-height: 40px;
+    }
+
+    .step p {
+        font-size: 0.7rem;
+        margin-top: 6px;
+    }
+
+    .form-step h3 {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .form-group label {
+        margin-bottom: 6px;
+        font-size: 0.85rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    .service-option {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    .option-label {
+        gap: 3px;
+        font-size: 0.85rem;
+    }
+
+    .option-label strong {
+        font-size: 0.9rem;
+    }
+
+    .option-label small {
+        font-size: 0.75rem;
+    }
+
+    .price-summary {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+    .confirmation-summary {
+        padding: 12px;
+    }
+
+    .summary-item {
+        padding: 8px 0;
+        font-size: 0.8rem;
+    }
+
+    .confirmation-note {
+        padding: 10px;
+        font-size: 0.75rem;
+    }
+
+    .form-navigation {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .form-navigation button {
+        width: 100%;
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+
+    /* Testimonials */
+    .testimonials-container {
+        max-width: 100%;
+    }
+
+    .testimonial-card {
+        padding: 15px;
+    }
+
+    .testimonial-header {
+        margin-bottom: 12px;
+    }
+
+    .rating i {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+
+    .author-avatar {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .author-info h4 {
+        font-size: 0.9rem;
+    }
+
+    .author-info p {
+        font-size: 0.75rem;
+    }
+
+    .carousel-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
+    }
+
+    .carousel-dots {
+        gap: 6px;
+    }
+
+    .dot {
+        width: 7px;
+        height: 7px;
+    }
+
+    /* FAQ */
+    .faq-container {
+        max-width: 100%;
+    }
+
+    .faq-question {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .faq-question h3 {
+        font-size: 0.95rem;
+    }
+
+    .faq-answer {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+    .faq-answer ul,
+    .faq-answer ol {
+        margin-left: 12px;
+    }
+
+    /* Contact */
+    .contact-section {
+        padding: 30px 0;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .contact-card {
+        padding: 15px;
+    }
+
+    .contact-card i {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .contact-card h3 {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+    }
+
+    .contact-card p {
+        font-size: 0.8rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 12px;
+    }
+
+    .contact-form {
+        gap: 12px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    .map-container {
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 25px 0 8px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-section h4 {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+
+    .footer-section p,
+    .footer-section a,
+    .footer-section li {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .social-icons {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .social-icons a {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+
+    .footer-bottom {
+        padding-top: 12px;
+        font-size: 0.75rem;
+        margin-top: 15px;
+        border-top: 1px solid var(--color-light);
+    }
+
+    .payment-methods {
+        justify-content: center;
+        gap: 8px;
+        font-size: 1rem;
+    }
+
+    .payment-methods i {
+        font-size: 1.2rem;
+    }
+
+    /* Floating buttons */
+    .whatsapp-button,
+    .back-to-top {
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
+        bottom: 12px;
+    }
+
+    .back-to-top {
+        right: 58px;
+    }
+
+    .whatsapp-button {
+        right: 12px;
+    }
+}
+
+/* EXTRA SMALL PHONES (< 360px) */
+@media (max-width: 360px) {
+    html {
+        font-size: 13px;
+    }
+
+    h1 { font-size: 1.2rem; }
+    h2 { font-size: 1rem; }
+    h3 { font-size: 0.9rem; }
+    p { font-size: 0.8rem; }
+
+    .btn {
+        padding: 7px 12px;
+        font-size: 0.75rem;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .navbar {
+        padding: 6px 0;
+    }
+
+    .navbar-logo a {
+        font-size: 0.85rem;
+        gap: 4px;
+    }
+
+    .navbar-logo i {
+        font-size: 1.1rem;
+    }
+
+    .hero {
+        padding: 25px 0;
+        margin-top: 45px;
+    }
+
+    .hero .container {
+        padding: 0 10px;
+        gap: 15px;
+    }
+
+    .hero-title {
+        font-size: 1.15rem;
+        margin-bottom: 8px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-illustration {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        gap: 8px;
+    }
+
+    .hero-buttons .btn {
+        font-size: 0.75rem;
+        padding: 8px 10px;
+    }
+
+    .trust-container {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .trust-item {
+        padding: 8px;
+    }
+
+    .trust-item i {
+        font-size: 1.2rem;
+        margin-bottom: 4px;
+    }
+
+    .trust-item h3 {
+        font-size: 0.9rem;
+        margin-bottom: 2px;
+    }
+
+    .trust-item p {
+        font-size: 0.65rem;
+    }
+
+    .service-card,
+    .product-card,
+    .contact-card {
+        padding: 10px;
+    }
+
+    .booking-form-container {
+        padding: 12px 10px;
+    }
+
+    .booking-steps {
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .step-indicator {
+        width: 36px;
+        height: 36px;
+        font-size: 0.8rem;
+        line-height: 36px;
+    }
+
+    .step p {
+        font-size: 0.65rem;
+        margin-top: 4px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+    }
+
+    .section-header p {
+        font-size: 0.78rem;
+    }
+
+    .whatsapp-button,
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 0.95rem;
+        bottom: 10px;
+    }
+
+    .back-to-top {
+        right: 54px;
+    }
+
+    .whatsapp-button {
+        right: 10px;
+    }
+}
+
+/* PRINT STYLES */
+@media print {
+    .navbar,
+    .whatsapp-button,
+    .back-to-top,
+    .booking,
+    .faq {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
