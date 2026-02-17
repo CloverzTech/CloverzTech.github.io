@@ -437,8 +437,8 @@ Kami akan segera menghubungi Anda untuk konfirmasi.
     // Encode message for WhatsApp
     const encodedMessage = encodeURIComponent(whatsappMessage);
     
-    // WhatsApp number - CloverTech official number
-    const whatsappNumber = '62858481555578';
+    // ✅ WhatsApp number - UPDATED to correct number
+    const whatsappNumber = '6285848155578';
     
     // Create WhatsApp link
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
