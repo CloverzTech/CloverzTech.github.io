@@ -406,11 +406,11 @@ function submitBooking() {
         day: 'numeric'
     });
     
-    // Create WhatsApp message
+    // ✅ Create WhatsApp message with CLOVER emojis
     const whatsappMessage = `
-🎯 *BOOKING LAYANAN CLOVERTECH*
+🍀 *BOOKING LAYANAN CLOVERTECH*
 
-📋 *Detail Pesanan:*
+🍀 *Detail Pesanan:*
 ━━━━━━━━━━━━━━━━━━━━━━
 *Layanan:* ${bookingData.services}
 *Tanggal:* ${formattedDate}
@@ -418,16 +418,16 @@ function submitBooking() {
 *Lokasi:* ${bookingData.location}
 ${bookingData.location === 'Home Service' ? `*Alamat:* ${bookingData.address}\n` : ''}
 
-👤 *Data Pelanggan:*
+🍀 *Data Pelanggan:*
 ━━━━━━━━━━━━━━━━━━━━━━
 *Nama:* ${bookingData.name}
 *WhatsApp:* ${bookingData.whatsapp}
 *Email:* ${bookingData.email}
 
-💬 *Catatan Tambahan:*
+🍀 *Catatan Tambahan:*
 ${bookingData.notes}
 
-💰 *Estimasi Total:* ${bookingData.totalPrice}
+🍀 *Estimasi Total:* ${bookingData.totalPrice}
 
 ━━━━━━━━━━━━━━━━━━━━━━
 Terima kasih telah mempercayai CloverTech!
@@ -437,10 +437,10 @@ Kami akan segera menghubungi Anda untuk konfirmasi.
     // Encode message for WhatsApp
     const encodedMessage = encodeURIComponent(whatsappMessage);
     
-    // ✅ WhatsApp number - UPDATED to correct number
-    const whatsappNumber = '6285848155578';
+    // ✅ WhatsApp number - Corrected number
+    const whatsappNumber = '6287870180184';
     
-    // Create WhatsApp link
+    // ✅ Create WhatsApp link (Fixed spacing)
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     
     // Simulate processing delay
